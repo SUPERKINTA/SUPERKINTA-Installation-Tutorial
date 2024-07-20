@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPER KINTA LED 安裝教學【K7-PLUS|K7S|F5全面適用】</title>
+    <link href="https://live.staticflickr.com/65535/53863054259_f8814e0fb4_o.png" rel="icon" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-bottom: 2px solid #007BFF;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #fff;
+        }
+
+        .tutorials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .tutorial {
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tutorial:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+        }
+
+        .tutorial i {
+            font-size: 5em;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .tutorial:hover i {
+            transform: scale(1.1);
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #333;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .modal-content h2 {
+            color: #fff;
+        }
+
+        .modal-content input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s;
+          }
+      
+          .modal-content {
+            background-color: #333;
+            color: #fff;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            text-align: center;
+            animation: slideIn 0.5s;
+          }
+      
+          .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+      
+          .close:hover,
+          .close:focus {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+          }
+      
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+      
+          @keyframes slideIn {
+            from { transform: translateY(-50px); }
+            to { transform: translateY(0); }
+          }
+    </style>
+    <body>
+        <div id="customAlertModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeCustomAlertModal()">&times;</span>
+            <p id="modalMessage"></p>
+          </div>
+        </div>
+    <!-- 加載FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SUPER KINTA LED 安裝教學【K7-PLUS|K7S|F5全面適用】</h1>
+        </header>
+        <main>
+            <div class="tutorials">
+                <div class="tutorial">
+                    <i class="fas fa-tools"></i>
+                    <button onclick="openPasswordEntry('H1')">H1【分體插頭】 教學</button>
+                </div>
+                <div class="tutorial">
+                    <i class="fas fa-tools"></i>
+                    <button onclick="openPasswordEntry('H1-2')">H1【一體插頭】 教學</button>
+                </div>
+                <div class="tutorial">
+                    <i class="fas fa-tools"></i>
+                    <button onclick="openPasswordEntry('H4')">H4【有防塵罩】教學</button>
+                </div>
+                <div class="tutorial">
+                    <i class="fas fa-tools"></i>
+                    <button onclick="openPasswordEntry('H4-2')">H4【鐵片固定】教學</button>
+                </div>
+                <div class="tutorial">
+                    <i class="fas fa-tools"></i>
+                    <button onclick="openPasswordEntry('H4-3')">H4【鐵絲固定】教學</button>
+                </div>
+                <div class="tutorial">
+                    <i class="fas fa-tools"></i>
+                    <button onclick="openPasswordEntry('H7')">H7【鐵片固定】 教學</button>
+                </div>
+                <div class="tutorial">
+                    <i class="fas fa-tools"></i>
+                    <button onclick="openPasswordEntry('H7-2')">H7【鐵絲固定】 教學</button>
+                </div>
+                <div class="tutorial">
+                    <i class="fas fa-tools"></i>
+                    <button onclick="openPasswordEntry('H8H9H11')">H8 H9 H11 教學</button>
+                </div>
+                <div class="tutorial">
+                    <i class="fas fa-tools"></i>
+                    <button onclick="openPasswordEntry('9005')">9005【HB3】教學</button>
+                </div>
+                <div class="tutorial">
+                    <i class="fas fa-tools"></i>
+                    <button onclick="openPasswordEntry('9006')">9006【HB4】 教學</button>
+                </div>
+                <div class="tutorial">
+                    <i class="fas fa-tools"></i>
+                    <button onclick="openPasswordEntry('9012')">9012【HIR2】 教學</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 SUPER KINTA. 保留所有權利，盜用必究。</p>
+        </footer>
+    </div>
+
+    <!-- 密碼輸入模態框 -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePasswordModal()">&times;</span>
+            <h2>請輸入密碼以觀看 <span id="tutorialType"></span> 教學</h2>
+            <input type="password" id="password" placeholder="輸入密碼">
+            <button class="submit-btn" onclick="checkPassword()">提交</button>
+        </div>
+    </div>
+
+    <script>
+        let tutorialLinks = {
+            'H1': 'https://youtube.com/shorts/qth9yy5NUec?feature=share',
+            'H1-2': 'https://youtube.com/shorts/cG6uZoEH8nA?feature=share',
+            'H4': 'https://youtube.com/shorts/xlJXsSDhC4s?feature=share',
+            'H4-2': 'https://youtube.com/shorts/Sls0ybWJPQk?feature=share',
+            'H4-3': 'https://youtube.com/shorts/lWrkuVxuLxM?feature=share',
+            'H7': 'https://youtube.com/shorts/TJXFQCYR0ec?feature=share',
+            'H7-2': 'https://youtu.be/Uy_ob0xHZ3U',
+            'H8H9H11': 'https://youtube.com/shorts/YSuNOc4B2so?feature=share',
+            '9005': 'https://youtu.be/d7Diu5DbaDY',
+            '9006': 'https://youtu.be/Nrvo553lLdQ',
+            '9012': 'https://youtube.com/shorts/Fb3_CEv975U?feature=share'
+        };
+
+        let passwords = {
+            'H1': 'QTQE83B6mm',
+            'H1-2': 'QTQE83B6mm',
+            'H4': '6Ft6NHrUZ9',
+            'H4-2': '6Ft6NHrUZ9',
+            'H4-3': '6Ft6NHrUZ9',
+            'H7': 'zR45TUwbZN',
+            'H7-2': 'zR45TUwbZN',
+            'H8H9H11': 'hbhTfDr3ck',
+            '9005': 'pC2UWetEXF',
+            '9006': '77rsYHzhV7',
+            '9012': 'nSMKbahGVD'
+        };
+
+        function openPasswordEntry(type) {
+            document.getElementById('tutorialType').innerText = type;
+            document.getElementById('passwordModal').style.display = 'block';
+        }
+
+        function closePasswordModal() {
+            document.getElementById('passwordModal').style.display = 'none';
+        }
+
+        function closeCustomAlertModal() {
+            document.getElementById('customAlertModal').style.display = 'none';
+        }
+
+        function checkPassword() {
+            let type = document.getElementById('tutorialType').innerText;
+            let password = document.getElementById('password').value;
+
+            if (password === passwords[type]) {
+                window.open(tutorialLinks[type], '_blank');
+                closePasswordModal(); // 關閉模態對話框
+            } else {
+                alert('密碼錯誤 請重新輸入【有疑慮請聊聊詢問Thx】');
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // 禁止右鍵菜單
+          document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            showModal('右鍵菜單已被禁用。');
+          });
+    
+          document.addEventListener('keydown', function(e) {
+            const message = '禁止訪問開發者工具。【SUPER KINTA. 保留所有權利，盜用必究。】';
+            // 禁用 F12
+            if (e.code === 'F12') {
+              e.preventDefault();
+              showModal(message);
+              return;
+            }
+    
+            // 禁用 Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+            if (e.ctrlKey && e.shiftKey && ['KeyI', 'KeyJ', 'KeyC'].includes(e.code)) {
+              e.preventDefault();
+              showModal(message);
+              return;
+            }
+    
+            // 禁用 Ctrl+U
+            if (e.ctrlKey && e.code === 'KeyU') {
+              e.preventDefault();
+              showModal(message);
+              return;
+            }
+          });
+    
+          function showModal(message) {
+            document.getElementById('modalMessage').innerText = message;
+            document.getElementById('customAlertModal').style.display = 'flex';
+          }
+    
+          window.showModal = showModal;
+          window.closeCustomAlertModal = closeCustomAlertModal;
+          
+          function adjustView() {
+            let device = navigator.userAgent;
+            if (/android/i.test(device)) {
+                document.body.style.zoom = "0.8";
+            } else if (/iPhone|iPad|iPod/i.test(device)) {
+                document.body.style.zoom = "0.85";
+            } else {
+                document.body.style.zoom = "1.0";
+            }
+        }
+
+        adjustView();
+        window.addEventListener('resize', adjustView);
+    });
+</script>
+</body>
+</html>
